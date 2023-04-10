@@ -5,7 +5,7 @@
 
 from itertools import combinations
 
-# 定义项集
+# 定义事务
 T1 = {'M', 'O', 'N', 'K', 'E', 'Y'}
 T2 = {'D', 'O', 'N', 'K', 'E', 'Y'}
 T3 = {'M', 'A', 'K', 'E'}
@@ -88,7 +88,7 @@ def get_frequent_itemsets(all_transactions, min_supp=min_support):
 
         # 剪枝
         new_frequent_itemsets = pruning(candidate_itemsets, all_transactions, min_supp)
-
+        print(new_frequent_itemsets)
         # 将得到的新频繁项集添加到all_frequent_itemsets中
         result_frequent_itemsets.update(new_frequent_itemsets)
         k += 1
