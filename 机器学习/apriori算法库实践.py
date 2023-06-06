@@ -1,8 +1,8 @@
 from efficient_apriori import apriori
 
 # 设置最小支持度和最小置信度阈值
-min_support = 0.6
-min_confidence = 0.8
+min_supp = 0.6
+min_con = 0.8
 
 # 定义五个事务
 T1 = {'M', 'O', 'N', 'K', 'E', 'Y'}
@@ -15,7 +15,7 @@ T5 = {'C', 'O', 'K', 'Y'}
 transactions = [T1, T2, T3, T4, T5]
 
 # 使用apriori算法找出频繁项集和关联规则
-itemsets, rules = apriori(transactions, min_support=min_support, min_confidence=min_confidence)
+itemsets, rules = apriori(transactions, min_support=min_supp, min_confidence=min_con)
 
 # 输出频繁项集和支持度计数
 print("频繁项集:")
